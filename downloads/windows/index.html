@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stave Wallet — Windows x64 — Stave (STV)</title>
+<meta name="description" content="Download the Stave (STV) wallet for Windows x64, v0.1.0. Verify the SHA-256 checksum before running.">
+<link rel="icon" type="image/x-icon" href="../../stave.ico">
+<style>
+  :root{--bg:#0a0e1a;--panel:#131a35;--panel2:#1a2350;--line:#26314a;--ash:#eaf0ff;--acc:#4de3ff;--acc-l:#a8efff;--text:#eef2ff;--muted:#9aa8d8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:"Segoe UI",Arial,sans-serif;line-height:1.7}
+  a{color:var(--acc-l);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  header{background:rgba(12,16,36,.94);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 0}
+  .bar img{width:28px;height:28px}
+  .bar .word{font-weight:600;letter-spacing:6px;font-size:17px;color:var(--ash)}
+  nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:600}
+  nav a{color:var(--muted)} nav a:hover{color:var(--acc-l);text-decoration:none}
+  h1{font-size:30px;color:var(--ash);margin:40px 0 6px;font-family:Georgia,serif}
+  .crumbs{color:var(--muted);font-size:13px;margin-bottom:26px}
+  .box{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:6px;padding:24px;margin-bottom:18px}
+  .box h2{font-size:18px;color:var(--acc-l);margin-bottom:10px}
+  .file{display:flex;align-items:center;gap:14px;background:var(--panel2);border:1px solid var(--line);border-radius:4px;padding:12px 16px;flex-wrap:wrap}
+  .file .name{font-family:Consolas,monospace;font-size:14px;color:var(--ash);flex:1;min-width:220px}
+  .btn{background:linear-gradient(180deg,var(--acc-l),var(--acc));color:#062a36;font-weight:800;padding:9px 20px;border-radius:4px;font-size:14px}
+  .btn:hover{text-decoration:none;filter:brightness(1.08)}
+  .sha{font-family:Consolas,monospace;font-size:12px;color:var(--muted);word-break:break-all;margin-top:14px}
+  .sha b{color:var(--acc);font-weight:700}
+  table{width:100%;border-collapse:collapse;margin:8px 0 4px}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+  td.num{font-family:Consolas,monospace;color:var(--acc-l)}
+  th{color:var(--acc);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:11px}
+  .steps li{margin-bottom:8px;color:var(--muted);font-size:14.5px}
+  .steps b{color:var(--ash)}
+  .note{border:1px dashed var(--line);border-left:3px solid var(--acc);border-radius:6px;padding:14px 18px;font-size:13.5px;color:var(--muted);margin:22px 0}
+  code{font-family:Consolas,monospace;background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:1px 7px;font-size:13px;color:var(--acc-l)}
+  footer{border-top:1px solid var(--line);margin-top:50px;padding:24px 0 40px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <img src="../../stave.ico" alt="Stave logo">
+  <div class="word">STAVE</div>
+  <nav><a href="../../">Home</a><a href="../../downloads/">Downloads</a><a href="../../explorer/">Explorer</a><a href="https://github.com/stave-core/stave">GitHub</a></nav>
+</div></header>
+
+<div class="wrap">
+  <div class="crumbs"><a href="../../">Home</a> / <a href="../../downloads/">Downloads</a> / Windows x64</div>
+  <h1>Stave Wallet — Windows x64</h1>
+
+  <div class="box">
+    <h2>Stave Wallet v0.1.0</h2>
+    <table>
+      <tr><th>File</th><td class="num">Stave-0.1-win-x64.zip</td></tr>
+      <tr><th>Size</th><td class="num">210835630 bytes</td></tr>
+      <tr><th>Release tag</th><td class="num">v0.1.0</td></tr>
+      <tr><th>Network</th><td class="num">mainnet</td></tr>
+    </table>
+    <div class="file" style="margin-top:14px">
+      <span class="name">Stave-0.1-win-x64.zip</span>
+      <a class="btn" href="https://github.com/stave-core/stave/releases/download/v0.1.0/Stave-0.1-win-x64.zip">Download</a>
+    </div>
+    <div class="sha"><b>SHA-256</b><br>published together with the release build — verify before running</div>
+  </div>
+
+  <div class="box">
+    <h2>Verify before running</h2>
+    <ol class="steps">
+      <li><b>Download</b> the archive from the button above or from the <a href="https://github.com/stave-core/stave/releases">GitHub releases page</a>.</li>
+      <li><b>Compute the checksum</b> in PowerShell:<br><code>Get-FileHash Stave-0.1-win-x64.zip -Algorithm SHA256</code></li>
+      <li><b>Compare</b> the output against the SHA-256 printed on this page. It must match exactly.</li>
+      <li><b>Unpack</b> and run the wallet. First start will sync the chain — the block schedule you see on the way is the one documented on the site.</li>
+    </ol>
+  </div>
+
+  <div class="note">A matching checksum proves the archive is the one published here — it is not a review of the software. The source is open under MIT; building from source is always an option. Treat experimental software accordingly and keep large amounts off machines you do not control.</div>
+</div>
+
+<footer><div class="wrap">Stave (STV) — experimental open-source software. <a href="https://github.com/stave-core/stave">Source on GitHub →</a></div></footer>
+</body>
+</html>
